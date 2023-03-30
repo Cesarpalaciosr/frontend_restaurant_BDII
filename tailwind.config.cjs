@@ -6,11 +6,21 @@ const config = {
     "./pages/**/*.{js,ts,jsx,tsx}",
 ],
   theme: {
+    fontFamily:     {
+      'Nunito': ['Medium 500']
+    },
     colors:{
       'morado':'#5d155e',
       'menosmorado':'#832d83',
+      'letragris':'#7d8da2',
+      'linea':'#e2e2e2',
+      'bgsr':'#f9f9fb',
     },
-    extend: {},
+    extend: {
+      margin: {
+        80: '80px'
+      },
+    },
   },
   plugins: [],
 };
