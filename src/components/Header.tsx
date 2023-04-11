@@ -1,45 +1,43 @@
 import React from "react";
-// import "~/styles/globals.css";
-// import { type NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import logo from "../assets/images/logo.png";
+import userIcon from "../assets/images/user_icon.svg";
 //  https://codepen.io/nabinbhatt/pen/qBMmxRJ
 
 export default function Header() {
   return (
-    <header>
-       <header className="header-container flex h-{60px} items-center justify-between my-0 mr-4">
-        <div className="logo font-bold italic">
-            LOGO
-        </div>
-        <div className="menu-active flex items-center justify-between hidden ">
-            <nav className="navbar flex items-center justify-center">
-                <div className="nav-item"><a href="#">Home</a></div>
-                <div className="nav-item"><a href="#">About</a></div>
-                <div className="nav-item"><a href="#">Contact</a></div>
-                <div className="nav-item"><a href="#">Blog</a></div>
-            </nav>
-            <div className="user-options">
-                <div className="option"><i className="fa fa-moon"></i></div>
-                <div className="option"><i className="fa fa-user"></i></div>
-                <div className="option"><i className="fa fa-gear"></i></div>
+    <>
+       <header className="header-container flex h-16 items-center my-0 place-content-between sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-linea ">
+            <div className = "flex justify-center mx-4 space-x-4">
+                <Image 
+                src={logo}
+                className="object-cover"
+                alt ="Picture Logo"
+                width={50}
+                height={50}
+                />
+                <h1 className="logo font-semibold text-4xl italic my-3">
+                    Restaurant BDII
+                </h1>
             </div>
-        </div>
-        <nav className="navbar">
-            <div className="nav-item"><a href="#">Home</a></div>
-            <div className="nav-item"><a href="#">About</a></div>
-            <div className="nav-item"><a href="#">Contact</a></div>
-            <div className="nav-item"><a href="#">Blog</a></div>
-        </nav>
-        <div className="user-options">
-            <div className="option"><i className="fa fa-moon"></i></div>
-            <div className="option"><i className="fa fa-user"></i></div>
-            <div className="option"><i className="fa fa-gear"></i></div>
-        </div>
-        <div className="menu">
-            <i className="fa fa-bars"></i>
-        </div>
-    </header>
-    </header>
+            <nav className="menu-active flex  justify-between text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200 ">
+                <ul className="navbar flex mx-4  space-x-8">
+                    <li ><a className="nav-item hover:text-azulito " href="#">Home</a></li>
+                    <li ><a className="nav-item hover:text-azulito " href="#">Menu</a></li>
+                    <li ><a className="nav-item hover:text-azulito " href="#">About us</a></li>
+                    <li className="nav-item"><Image 
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+                src={userIcon}
+                className="object-cover"
+                alt ="user icon"
+                width={20}
+                height={20}
+                /></li>
+                </ul>
+            </nav>
+        </header>
+    </>
   );
 }

@@ -15,6 +15,7 @@ const config = {
       'letragris':'#7d8da2',
       'linea':'#e2e2e2',
       'bgsr':'#f9f9fb',
+      'azulito':'#5cc2f0',
     },
     extend: {
       margin: {
