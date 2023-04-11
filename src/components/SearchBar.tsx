@@ -9,7 +9,9 @@ export default function SearchBar(){
     
     return (
         <>
-        <input placeholder="Buscar Comida"></input>
+        <section className="searchWrapper relative ">
+            <input className="rounded-xl border-4 w-full h-8 pt-1 pr-1 mx-4" type="text" placeholder="Buscar Comida"/>
+        </section>
         </>
     );
 }
